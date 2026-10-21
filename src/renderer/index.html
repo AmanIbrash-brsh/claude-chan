@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; script-src 'self'; font-src 'self'">
+  <title>Claude-chan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="bubble" hidden>
+    <div id="said"></div>
+    <div id="status" hidden><span id="status-text"></span><button id="stop" title="Остановить">■</button></div>
+    <form id="form" hidden>
+      <input id="input" autocomplete="off" placeholder="Напиши мне что-нибудь…">
+      <button id="send" type="submit">➤</button>
+    </form>
+  </div>
+
+  <div id="avatar" data-state="idle">
+    <div id="sprites"></div>
+  </div>
+
+  <script src="phrases.js"></script>
+  <script src="renderer.js"></script>
+</body>
+</html>

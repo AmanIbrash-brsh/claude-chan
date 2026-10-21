@@ -1,0 +1,16 @@
+{
+  "name": "claude-chan",
+  "version": "0.1.0",
+  "description": "Desktop avatar assistant powered by Claude Code",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc && cp -r src/renderer/index.html src/renderer/style.css src/renderer/sprites src/renderer/fonts dist/renderer/",
+    "start": "npm run build && electron . --ozone-platform=x11 --enable-transparent-visuals --disable-gpu",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "electron": "^33.0.0",
+    "typescript": "^5.6.0"
+  }
+}
